@@ -42,6 +42,9 @@ function HomeScreen2({ navigation }) {
           <Card.Content>
             <Title>{item.title}</Title>
             <Paragraph>{item.full_description}</Paragraph>
+            <Paragraph>{item.things_inside}</Paragraph>
+            <Paragraph>{item.age_or_dimensions}</Paragraph>
+            <Paragraph>{item.the_price}</Paragraph>
           </Card.Content>
           <Card.Cover source={{ uri: item.featured_image }} />
           <Card.Actions>
@@ -142,6 +145,60 @@ function DetailsScreen({ navigation }) {
               name: 'full_description',
 
               label: 'Full Description',
+
+              rules: {
+                required: {
+                  value: false,
+                },
+              },
+
+              textInputProps: {
+                multiline: true,
+                numberOfLines: 4
+              },
+            },
+            {
+              type: 'input',
+
+              name: 'things_inside',
+
+              label: 'Things Inside',
+
+              rules: {
+                required: {
+                  value: false,
+                },
+              },
+
+              textInputProps: {
+                multiline: true,
+                numberOfLines: 4
+              },
+            },
+            {
+              type: 'input',
+
+              name: 'age_or_dimensions',
+
+              label: 'Age or Dimensions',
+
+              rules: {
+                required: {
+                  value: false,
+                },
+              },
+
+              textInputProps: {
+                multiline: true,
+                numberOfLines: 4
+              },
+            },
+            {
+              type: 'input',
+
+              name: 'the_price',
+
+              label: 'The Price',
 
               rules: {
                 required: {
